@@ -25,6 +25,7 @@ if (showSuccessLoginMessage == null) {
 		document.getElementById('success-login-alert').style.display = 'none';
 
 	}, 1200);
+
 }
 function showButtons() {
 	if (userLoggedIn) {
@@ -41,6 +42,7 @@ function showButtons() {
 	}
 }
 showButtons();
+
 function onLogin() {
 	window.location.href = "login.html";
 }
@@ -248,9 +250,9 @@ function onClearLocalStorage() {
 	localStorage.removeItem("categories");
 	localStorage.removeItem("computers");
 	localStorage.removeItem("basketComputers");
-	localStorage.removeItem("orders");
-	localStorage.removeItem("customers");
-	localStorage.removeItem("order-customer");
+	// localStorage.removeItem("orders");
+	// localStorage.removeItem("customers");
+	// localStorage.removeItem("order-customer");
 	localStorage.removeItem("logged-in-user-id");
 	window.location.reload();
 
@@ -261,20 +263,20 @@ function onClearLocalStorage() {
 
 
 
-var customers = [];
-customers.push({ id: 1, name: "Customer-1", address: "Customer-1-address", phone: "044-111-2222", email: "customer1@gmail.com" });
-customers.push({ id: 2, name: "Customer-2", address: "Customer-2-address", phone: "044-555-7777", email: "customer2@gmail.com" });
-customers.push({ id: 3, name: "Customer-3", address: "Customer-3-address", phone: "044-999-5555", email: "customer3@gmail.com" });
+// var customers = [];
+// customers.push({ id: 1, name: "Customer-1", address: "Customer-1-address", phone: "044-111-2222", email: "customer1@gmail.com" });
+// customers.push({ id: 2, name: "Customer-2", address: "Customer-2-address", phone: "044-555-7777", email: "customer2@gmail.com" });
+// customers.push({ id: 3, name: "Customer-3", address: "Customer-3-address", phone: "044-999-5555", email: "customer3@gmail.com" });
 
 
 
-var customersString = localStorage.getItem("customers");
+// var customersString = localStorage.getItem("customers");
 
-if (customersString == null) {
-	localStorage.setItem("customers", JSON.stringify(customers));
-} else {
-	customers = JSON.parse(customersString);
-}
+// if (customersString == null) {
+// 	localStorage.setItem("customers", JSON.stringify(customers));
+// } else {
+// 	customers = JSON.parse(customersString);
+// }
 
 
 
